@@ -6,12 +6,23 @@ namespace CR1002.Controllers
     [Route("api/[controller]")]
     public class HealthController : ControllerBase
     {
+
+        private readonly IConfiguration _configuration;
+
+        public HealthController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         [HttpGet]
         public IActionResult GetHealth()
         {
             return Ok(new {
-                StatusCode = "200",
-                Message = "The API is running smoothly and all systems are operational."
+                Status = "200",
+                ApplicationName = _configuration["ApplicationSettings:ApplicationName"],
+                SupportEmailId = _configuration["ApplicationSettings:SupportEmailId"],
+                StudentBaseURl = _configuration["ApplicationSettings:StudentBaseURl"]
+
             });
         }
     }
