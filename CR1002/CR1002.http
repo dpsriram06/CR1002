@@ -1,0 +1,6 @@
+@CR1002_HostAddress = http://localhost:5152
+
+GET {{CR1002_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

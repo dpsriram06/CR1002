@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../CR1002_UnitTest/CR1002_UnitTest.csproj" Id="df2913b3-3cfd-47e2-a89a-b85aa58ae7fb" />
+  <Project Path="CR1002.csproj" />
+</Solution>
