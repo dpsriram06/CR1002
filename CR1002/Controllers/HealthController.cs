@@ -10,7 +10,7 @@ namespace CR1002.Controllers
         public IActionResult GetHealth()
         {
             return Ok(new {
-                StatusCode = "API is healthy",
+                StatusCode = "200",
                 Message = "The API is running smoothly and all systems are operational."
             });
         }
