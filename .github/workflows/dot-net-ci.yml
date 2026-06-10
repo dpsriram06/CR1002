@@ -26,10 +26,10 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore CR1002/CR1002.csproj
 
       - name: Build
-        run: dotnet build --no-restore
+        run: dotnet build CR1002/CR1002.csproj --no-restore
 
       - name: Test
-        run: dotnet test --no-build
+        run: dotnet test TestProject1/TestProject1.csproj --no-build
